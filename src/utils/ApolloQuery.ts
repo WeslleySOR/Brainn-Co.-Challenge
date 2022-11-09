@@ -18,9 +18,9 @@ export const GET_ALL_LOTTERY_AND_CONTEST = gql`
   }
 `;
 
-export const GET_LOTERY_BY_CONTEST = gql`
-  query LotteryByContest($id: Number!) {
-    concurso(where: { id: $id }) {
+export const GET_LOTTERY_BY_CONTEST = gql`
+  query LotteryByContest($id: ID!) {
+    concurso(id: $id) {
       id
       loteria
       numeros
